@@ -1,0 +1,112 @@
+﻿@model HeathyFood.Models.Entities.SanPham
+<div class="product-zoom-info-container">
+    <div id="closed-modal" class="closed-modal" onclick="closeModal()">X</div>
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <div class="product-zoom-area">
+                @if (Model.KhuyenMai != null)
+                {
+                    double km = Model.KhuyenMai.Value * 100;
+                    <span class="batch">@km %</span>
+                }
+                <div class="cart-btn-toggle d-lg-none">
+                    <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                    <div class="price-btn">
+                        <div class="price-increase-decrese-group d-flex">
+                            <span class="decrease-btn">
+                                <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                    -
+                                </button>
+                            </span>
+                            <input type="text" name="quantity" class="form-controls input-number" value="1">
+                            <span class="increase">
+                                <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                    +
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-slick slick-initialized slick-slider">
+                    <div class="slick-list draggable">
+                        <div class="slick-track" style="opacity: 1; width: 1996px;">
+                            <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 499px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
+                                <div>
+                                    <div style="width: 100%; display: inline-block;">
+                                        <img src="~/Publics/images/product-detail/01.jpg" alt="" class="img-fluid blur-up lazyload image_zoom_cls-0" style="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" style="width: 499px; position: relative; left: -499px; top: 0px; z-index: 998; opacity: 0;">
+                                <div>
+                                    <div style="width: 100%; display: inline-block;">
+                                        <img src="~/Publics/images/product-detail/02.jpg" alt="" class="img-fluid blur-up lazyload image_zoom_cls-1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 499px; position: relative; left: -998px; top: 0px; z-index: 998; opacity: 0;">
+                                <div>
+                                    <div style="width: 100%; display: inline-block;">
+                                        <img src="~/Publics/images/product-detail/03.jpg" alt="" class="img-fluid blur-up lazyload image_zoom_cls-2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 499px; position: relative; left: -1497px; top: 0px; z-index: 998; opacity: 0;">
+                                <div>
+                                    <div style="width: 100%; display: inline-block;">
+                                        <img src="~/Publics/images/product-detail/01.jpg" alt="" class="img-fluid blur-up lazyload image_zoom_cls-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="slider-nav slick-initialized slick-slider"><div class="slick-list draggable" style="padding: 0px 50px;"><div class="slick-track" style="opacity: 1; width: 400px; transform: translate3d(0px, 0px, 0px);"><div class="slick-slide slick-current slick-center" data-slick-index="0" aria-hidden="true" style="width: 100px;"><div><div style="width: 100%; display: inline-block;"><img src="~/Publics/images/product-detail/01.jpg" alt="" class="img-fluid blur-up lazyload"></div></div></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 100px;"><div><div style="width: 100%; display: inline-block;"><img src="~/Publics/images/product-detail/02.jpg" alt="" class="img-fluid blur-up lazyload"></div></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 100px;"><div><div style="width: 100%; display: inline-block;"><img src="~/Publics/images/product-detail/03.jpg" alt="" class="img-fluid blur-up lazyload"></div></div></div><div class="slick-slide slick-center" data-slick-index="3" aria-hidden="true" style="width: 100px;"><div><div style="width: 100%; display: inline-block;"><img src="~/Publics/images/product-detail/01.jpg" alt="" class="img-fluid blur-up lazyload"></div></div></div></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="product-details-content">
+                <a class="wish-link" href="#">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                </a>
+                <a href="#" class="cata">@Model.LoaiSanPham.TenLoai</a>
+                <h2>@Model.TenSP</h2>
+                <p class="quantity">@Model.KG KG </p>
+                <h3 class="price">
+                    @if (Model.KhuyenMai == null)
+                    {
+                        @Model.Gia
+
+                    }
+                    @if (Model.KhuyenMai != null)
+                    {
+
+                        @Model.GiaKM <del> @Model.Gia</del>
+                    }
+                </h3>
+                <div class="price-increase-decrese-group d-flex">
+                    <span class="decrease-btn">
+                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                            -
+                        </button>
+                    </span>
+                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                    <span class="increase">
+                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                            +
+                        </button>
+                    </span>
+                </div>
+                <p>@Model.Mota</p>
+                <div class="d-flex justify-content-end">
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

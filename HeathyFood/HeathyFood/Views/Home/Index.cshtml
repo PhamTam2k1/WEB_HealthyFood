@@ -1,0 +1,761 @@
+﻿@model IEnumerable<HeathyFood.Models.Entities.LoaiSanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HeathyFood_Layout.cshtml";
+}
+
+
+<!-- banner-section start -->
+<section class="banner-section bg-img4 d-flex align-items-center">
+    <div class="banner-content-area">
+        <div class="container">
+            <div class="banner-content">
+                <h6>Organic and fresh food</h6>
+                <h2>Get freshness delivered<br>on your doorstep.</h2>
+                <a href="#" class="banner-btn">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner-section end -->
+<!-- info-box-section start -->
+<section class="info-box-section">
+    <div class="container">
+        <div class="info-box-container swiper-container-initialized swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1498.46px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide-duplicate" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="0">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/info.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>Place order</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="1">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/credit-card.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>Easy Payment</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="2">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/info.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>First Delivery</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate-next" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="0">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/info.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>Place order</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-prev" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="1">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/credit-card.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>Easy Payment</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-active" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="2">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/info.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>First Delivery</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="0">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/info.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>Place order</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="1">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/credit-card.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>Easy Payment</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="width: 350px; margin-right: 30px;" data-swiper-slide-index="2">
+                    <div class="info-box-item d-sm-flex text-center text-sm-left">
+                        <div class="info-icon">
+                            <img src="~/Publics/images/info-item/info.svg" alt="info icon">
+                        </div>
+                        <div class="info-content">
+                            <h6>First Delivery</h6>
+                            <p>Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+    </div>
+</section>
+<!-- info-box-section end -->
+<!-- catagory section start -->
+<section class="catagory-section">
+    <div class="container p-lg-0">
+        <div class="section-heading">
+            <h4 class="heading-title"><span class="heading-circle green"></span> Products Catagories</h4>
+        </div>
+
+        <div class="section-wrapper">
+            <!-- Add Arrows -->
+            <div class="slider-btn-group">
+                <div class="slider-btn-prev catagory-slider-prev" tabindex="0" role="button" aria-label="Previous slide">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 443.52 443.52" style="enable-background:new 0 0 443.52 443.52;" xml:space="preserve"><g><path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8
+                        c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712
+                        L143.492,221.863z"></path></g></svg>
+                </div>
+                <div class="slider-btn-next catagory-slider-next" tabindex="0" role="button" aria-label="Next slide">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve"><g><path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+                        L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+                        l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"></path></g></svg>
+                </div>
+            </div>
+            <div class="catagory-container swiper-container-initialized swiper-container-horizontal swiper-container-android">
+                <div class="swiper-wrapper " style="transition-duration: 0ms; ">
+
+                    @Html.Action("LoadCategory", "Module")
+                
+                </div>
+               
+
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- catagory section end -->
+<!-- trending product-section start -->
+@Html.Action("TrendingProduct", "Module");
+<!-- trending product-section end -->
+<!-- advertisement-section start -->
+<div class="advertisement-section pb-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-6">
+                <a href="#"><img src="~/Publics/images/advertise/01.jpg" alt="advertise"></a>
+            </div>
+            <div class="col-lg-6">
+                <a href="#"><img src="~/Publics/images/advertise/02.jpg" alt="advertise"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- advertisement-section start -->
+<!-- recommended product-section start -->
+<section class="recomended-product-section pb-5">
+    <div class="container">
+        <div class="section-heading">
+            <h4 class="heading-title"><span class="heading-circle"></span> We Recommend You</h4>
+        </div>
+
+        <div class="section-wrapper">
+            <!-- Add Arrows -->
+            <div class="slider-btn-group">
+                <div class="slider-btn-prev trending-slider-prev" tabindex="0" role="button" aria-label="Previous slide">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 443.52 443.52" style="enable-background:new 0 0 443.52 443.52;" xml:space="preserve"><g><path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8
+                        c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712
+                        L143.492,221.863z"></path></g></svg>
+                </div>
+                <div class="slider-btn-next trending-slider-next" tabindex="0" role="button" aria-label="Next slide">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve"><g><path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105
+                        L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795
+                        l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"></path></g></svg>
+                </div>
+            </div>
+            <div class="mlr-20">
+                <div class="recommend-product-container swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-wrapper" style="transform: translate3d(-925px, 0px, 0px); transition-duration: 0ms;">
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img src="~/Publics/images/products/06.png" alt="product"></a>
+                                    <span class="batch">30%</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Catagory</a>
+                                    <h6><a href="product-detail.html" class="product-title">Raddish Vegitable</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$8.00 <del>$10.00</del></div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img src="~/Publics/images/products/07.png" alt="product"></a>
+                                    <span class="batch">10%</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Catagory</a>
+                                    <h6><a href="product-detail.html" class="product-title">Carrot</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$8.00 <del>$10.00</del></div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img src="~/Publics/images/products/08.png" alt="product"></a>
+                                    <span class="batch sale">Sale</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Catagory</a>
+                                    <h6><a href="product-detail.html" class="product-title">Apple</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$8.00 <del>$10.00</del></div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img src="~/Publics/images/products/05.png" alt="product"></a>
+                                    <span class="batch sale">Sale</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Catagory</a>
+                                    <h6><a href="product-detail.html" class="product-title">Corn on the Cob</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$8.00 <del>$10.00</del></div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img style="height:200px;" src="~/Publics/images/SanPham/HatDieu2.jpg" alt="product"></a>
+                                    <span class="batch sale">15 %</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Hạt dinh dưỡng</a>
+                                    <h6><a href="product-detail.html" class="product-title">Hạt điều</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">255.000 vnd</div>
+
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide" data-swiper-slide-index="2" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img style="height:200px;" src="~/Publics/images/SanPham/HatHoDao1.jpg" alt="product"></a>
+
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Hạt dinh dưỡng</a>
+                                    <h6><a href="product-detail.html" class="product-title">Hạt hồ đào</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">190.000 vnd</div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" data-swiper-slide-index="3" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img src="~/Publics/images/SanPham/HanhNhan_01.jpg" alt="product"></a>
+                                    <span class="batch sale">30%</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Hạt dinh dưỡng</a>
+                                    <h6><a href="#" class="product-title">Hạnh Nhân</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">189.000 vnd</div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="4" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img style="height:200px;" src="~/Publics/images/SanPham/MutVietQuat1.png" alt="product"></a>
+                                    <span class="batch sale">10 %</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Mứt</a>
+                                    <h6><a href="product-detail.html" class="product-title">Mứt việt quất</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">450.000 vnd</div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img style="height:200px;" src="~/Publics/images/SanPham/Granola1.jpg" alt="product"></a>
+
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Ngũ cốc</a>
+                                    <h6><a href="product-detail.html" class="product-title">Thanh hạt ngũ cốc</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">400.000vnd</div>
+
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item stock-out">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img src="~/Publics/images/products/03.png" alt="product"></a>
+                                    <span class="batch">30%</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Catagory</a>
+                                    <h6><a href="product-detail.html" class="product-title">Kiwi</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$8.00 <del>$10.00</del></div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img src="~/Publics/images/products/04.png" alt="product"></a>
+                                    <span class="batch">10%</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Catagory</a>
+                                    <h6><a href="product-detail.html" class="product-title">Tomato</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$8.00 <del>$10.00</del></div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 201.25px; margin-right: 30px;">
+                            <div class="product-item">
+                                <div class="product-thumb">
+                                    <a onclick="openModal()"><img src="~/Publics/images/products/05.png" alt="product"></a>
+                                    <span class="batch sale">Sale</span>
+                                    <a class="wish-link" href="#">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <a href="#" class="cata">Catagory</a>
+                                    <h6><a href="product-detail.html" class="product-title">Corn on the Cob</a></h6>
+                                    <p class="quantity">1 kg</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$8.00 <del>$10.00</del></div>
+                                        <div class="cart-btn-toggle" onclick="cartopen()">
+                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</span>
+
+                                            <div class="price-btn">
+                                                <div class="price-increase-decrese-group d-flex">
+                                                    <span class="decrease-btn">
+                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                            -
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                    <span class="increase">
+                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                            +
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </div>
+                <div class="text-center pt-3">
+                    <a href="product-list.html" class="more-product-btn">More Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- recommended product-section end -->
+<!-- advertisement-section start -->
+<div class="advertisement-section pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <a href="#"><img src="~/Publics/images/advertise/10.jpg" alt="advertise"></a>
+            </div>
+            <div class="col-lg-4">
+                <a href="#"><img src="~/Publics/images/advertise/11.jpg" alt="advertise"></a>
+            </div>
+            <div class="col-lg-4">
+                <a href="#"><img src="~/Publics/images/advertise/12.jpg" alt="advertise"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- advertisement-section start -->
+<!-- testimonial-section start -->
+<section class="testimonial-section">
+    <div class="container">
+        <div class="section-heading">
+            <h4 class="heading-title"><span class="heading-circle"></span>Testimonial</h4>
+        </div>
+
+        <div class="section-wrapper">
+            <div class="testimonial-container swiper-container-initialized swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transform: translate3d(-925px, 0px, 0px); transition-duration: 0ms;">
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-prev" data-swiper-slide-index="0" style="width: 895px; margin-right: 30px;">
+                        <div class="testimonial-body">
+                            <div class="testi-author-pic"><img src="~/Publics/images/testimonial/author.jpg" alt="author"></div>
+                            <p class="desc">What a load of rubbish bits and bobs pear shaped owt to do with me good tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, haggle young delinquent say so I said bite your arm off</p>
+                            <div class="author-info">
+                                <h6 class="name">Jhon Doe</h6>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active swiper-slide-duplicate-next swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 895px; margin-right: 30px;">
+                        <div class="testimonial-body">
+                            <div class="testi-author-pic"><img src="~/Publics/images/testimonial/author.jpg" alt="author"></div>
+                            <p class="desc">What a load of rubbish bits and bobs pear shaped owt to do with me good tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, haggle young delinquent say so I said bite your arm off</p>
+                            <div class="author-info">
+                                <h6 class="name">Jhon Doe</h6>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-next" data-swiper-slide-index="0" style="width: 895px; margin-right: 30px;">
+                        <div class="testimonial-body">
+                            <div class="testi-author-pic"><img src="~/Publics/images/testimonial/author.jpg" alt="author"></div>
+                            <p class="desc">What a load of rubbish bits and bobs pear shaped owt to do with me good tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, haggle young delinquent say so I said bite your arm off</p>
+                            <div class="author-info">
+                                <h6 class="name">Jhon Doe</h6>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+            <!-- Add Arrows -->
+            <div class="testimonial-slider-btn-group">
+                <div class="testimonial-slider-prev" tabindex="0" role="button" aria-label="Previous slide">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;" xml:space="preserve"><path style="fill:#2196F3;" d="M501.342,245.185H36.424L210.227,71.404c4.093-4.237,3.975-10.99-0.262-15.083 c-4.134-3.992-10.687-3.992-14.82,0l-192,192c-4.171,4.16-4.179,10.914-0.019,15.085c0.006,0.006,0.013,0.013,0.019,0.019l192,192 c4.093,4.237,10.845,4.354,15.083,0.262c4.237-4.093,4.354-10.845,0.262-15.083c-0.086-0.089-0.173-0.176-0.262-0.262 L36.424,266.519h464.917c5.891,0,10.667-4.776,10.667-10.667S507.233,245.185,501.342,245.185z"></path><path d="M202.675,458.519c-2.831,0.005-5.548-1.115-7.552-3.115l-192-192c-4.164-4.165-4.164-10.917,0-15.083l192-192 c4.237-4.093,10.99-3.975,15.083,0.262c3.992,4.134,3.992,10.687,0,14.82L25.758,255.852L210.206,440.3 c4.171,4.16,4.179,10.914,0.019,15.085C208.224,457.39,205.508,458.518,202.675,458.519z"></path><path d="M501.342,266.519H10.675c-5.891,0-10.667-4.776-10.667-10.667s4.776-10.667,10.667-10.667h490.667 c5.891,0,10.667,4.776,10.667,10.667S507.233,266.519,501.342,266.519z"></path></svg>
+                </div>
+                <div class="testimonial-slider-next" tabindex="0" role="button" aria-label="Next slide">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path style="fill:#2196F3;" d="M511.189,259.954c1.649-3.989,0.731-8.579-2.325-11.627l-192-192 c-4.237-4.093-10.99-3.975-15.083,0.262c-3.992,4.134-3.992,10.687,0,14.82l173.803,173.803H10.667 C4.776,245.213,0,249.989,0,255.88c0,5.891,4.776,10.667,10.667,10.667h464.917L301.803,440.328 c-4.237,4.093-4.355,10.845-0.262,15.083c4.093,4.237,10.845,4.354,15.083,0.262c0.089-0.086,0.176-0.173,0.262-0.262l192-192 C509.872,262.42,510.655,261.246,511.189,259.954z"></path><path d="M309.333,458.546c-5.891,0.011-10.675-4.757-10.686-10.648c-0.005-2.84,1.123-5.565,3.134-7.571L486.251,255.88 L301.781,71.432c-4.093-4.237-3.975-10.99,0.262-15.083c4.134-3.992,10.687-3.992,14.82,0l192,192 c4.164,4.165,4.164,10.917,0,15.083l-192,192C314.865,457.426,312.157,458.546,309.333,458.546z"></path><path d="M501.333,266.546H10.667C4.776,266.546,0,261.771,0,255.88c0-5.891,4.776-10.667,10.667-10.667h490.667 c5.891,0,10.667,4.776,10.667,10.667C512,261.771,507.224,266.546,501.333,266.546z"></path></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- testimonial-section end -->

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<HeathyFood.Models.Entities.LoaiSanPham>
+@foreach (var loai in Model)
+{
+    <div class="widget-wrapper" id="scatagory-widget01">
+        <ul class="catagory-menu collapse show" id="catagory-main">
+            <li>
+
+                <a class="" data-toggle="collapse" href="@Url.Action("LoadProductCategory", "Categories", new { id = loai.MaLoai })" role="button" aria-expanded="false" aria-controls="catagory-widget-s1">@loai.TenLoai<span class="plus-minus"></span></a>
+                
+            </li>
+
+        </ul>
+    </div>
+
+}
+
+<script>
+    
+
+        
+        @*$("li").click(function (e) {
+        var id = $(this).attr("id");
+                 $.ajax({
+                url: @Url.Action("Categories", "LoadProductCategory"),
+                type: 'get',
+                data: {
+                    id: id
+                },
+                dataType: 'html',
+                success: function (data) {
+                    $('div.product').html(data);
+                }
+            });
+
+    });*@
+
+   
+</script>

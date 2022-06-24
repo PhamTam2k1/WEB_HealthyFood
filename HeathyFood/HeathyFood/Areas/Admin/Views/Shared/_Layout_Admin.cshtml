@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <!-- Google Font: Source Sans Pro -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link href="~/Publics/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="~/Publics/dist/css/adminlte.css" rel="stylesheet" />
+    <link href="~/Publics/css/Layout_Admin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @RenderSection("header", required: false)
+</head>
+<body class="hold-transition sidebar-mini">
+
+    <!-- Site wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="~/Admin" class="brand-link">
+              
+                <img src="~/Publics/images/icon/manager.png" alt="AdminLTE Logo" class="brand-image" style="opacity: .8">
+                <span style="font-size:16px;" class="brand-text font-weight-light">Xin chào: @Session["FullName_Admin"]</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+
+
+                        <img src="~/Publics/images/icon/menu.png" alt="User Image">
+                    </div>
+                   
+                <h6 style="color:aliceblue; margin-left:20px;"> Quản Lý Hệ Thống</h6>
+                    
+                    <div class="info">
+                        <a href="#" class="d-block"></a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                
+                                <img src="~/Publics/images/icon/organic-product.png" class="img-circle elevation-2" alt="User Image">
+                                <p>
+                                    Thông tin sản phẩm
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Index","SanPham")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Danh mục sản phẩm</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Index","LoaiSanPham")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Danh mục loại sản phẩm</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Index","AnhSanPham")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Danh mục ảnh sản phẩm</p>
+                                    </a>
+                                </li>
+                              
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="~/Publics/images/icon/group.png" class="img-circle elevation-2" alt="User Image">
+                                <p>
+                                    Người dùng
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Index","User")" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>User</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            
+                           
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        @RenderBody()
+
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <a href="@Url.Action("Logout","Default")" class="nav-link">
+
+                                <img src="~/Publics/images/icon/log-out.png" />
+                            </a>
+            </div>
+            <strong>Phạm Thị Tâm Lớp CNTT3 - K60</strong> 
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="~/Publics/plugins/jquery/jquery.min.js"></script>
+    <script src="~/Publics/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Publics/dist/js/adminlte.min.js"></script>
+    <script src="~/Publics/dist/js/demo.js"></script>
+    @RenderSection("scripts", required: false)
+    @RenderSection("footer", required: false)
+</body>
+</html>

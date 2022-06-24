@@ -1,0 +1,315 @@
+﻿@model PagedList.IPagedList<HeathyFood.Models.Entities.SanPham>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "LoadProductCategory";
+    Layout = "~/Views/Shared/_HeathyFood_Layout.cshtml";
+}
+
+<div class="page-layout" style="transform: none;">
+    <div class="catagory-sidebar-area">
+        <div class="catagory-sidebar-area-inner">
+            <div class="catagory-sidebar all-catagory-option">
+                <ul class="catagory-submenu">
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget1" role="button" aria-expanded="false" aria-controls="catagory-widget1">Vegetables<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse show" id="catagory-widget1">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget2" role="button" aria-expanded="false" aria-controls="catagory-widget2">Fruits<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget2">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget3" role="button" aria-expanded="false" aria-controls="catagory-widget3">Salads<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget3">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget4" role="button" aria-expanded="false" aria-controls="catagory-widget4">Fish &amp; seafood<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget4">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget5" role="button" aria-expanded="false" aria-controls="catagory-widget5">Fresh Meat<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget5">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget6" role="button" aria-expanded="false" aria-controls="catagory-widget6">Health Products<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget6">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget7" role="button" aria-expanded="false" aria-controls="catagory-widget7">Butter &amp; Eggs<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget7">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget8" role="button" aria-expanded="false" aria-controls="catagory-widget8">Oils and Venegar<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget8">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget9" role="button" aria-expanded="false" aria-controls="catagory-widget9">Frozen Food<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget9">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a data-toggle="collapse" href="#catagory-widget10" role="button" aria-expanded="false" aria-controls="catagory-widget10">Jam &amp; Honey<i class="fas fa-angle-down"></i></a>
+                        <ul class="catagory-submenu collapse" id="catagory-widget10">
+                            <li><a href="product-list.html">Artichoke.</a></li>
+                            <li><a href="product-list.html">Aubergine (eggplant).</a></li>
+                            <li><a href="product-list.html">Asparagus.</a></li>
+                            <li><a href="product-list.html">Broccoflower (a hybrid).</a></li>
+                            <li><a href="product-list.html">Broccoli (calabrese).</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-content-area" style="transform: none;">
+        <!-- page-header-section start -->
+        <div class="page-header-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-between justify-content-md-end">
+                        <ul class="breadcrumb">
+                            <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                            <li><span>/</span></li>
+                            <li>Categories</li>
+                        </ul>
+
+                    </div>
+                    <div class="col-6 d-flex justify-content-between justify-content-md-end">
+                        @using (Html.BeginForm())
+                        {
+                            <div class="form-group form-check-inline" style="margin-left: 40px;">
+                                @Html.TextBox("SearchString", "", new { @class = "form-control", @placeholder = "Search for Products" })
+                                <input type="submit" class="btn-btn-defaut" style="margin-left:20px;" value="search">
+
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- page-header-section end -->
+            <!-- page-content -->
+
+            <section class="page-content section-ptb-90" style="transform: none;">
+                <div class="container" style="transform: none;">
+                    <div class="row" style="transform: none;">
+                        <div class="col-lg-3 sidebar order-lg-last" style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+                            <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none;">
+                                <div class="widget widget-head">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 data-toggle="collapse" href="#filtermain" role="button" aria-expanded="false" aria-controls="filtermain"><i class="fas fa-filter"></i> Filter</h6>
+                                        <a href="@Url.Action("Index","Categories")">Clear All</a>
+                                    </div>
+                                </div>
+                                <div class="widget-callapse" id="filtermain">
+                                    <div class="widget">
+                                        <h4 class="widget-title d-none d-lg-block">Categories</h4>
+                                        <a class="widget-title d-lg-none" data-toggle="collapse" href="#scatagory-widget01" role="button" aria-expanded="false" aria-controls="scatagory-widget01">Catagories<i class="fas fa-angle-down"></i></a>
+                                        @Html.Action("LoadCate", "Categories")
+
+                                    </div>
+
+                                    @*<div class="widget">
+                                        <h4 class="widget-title d-none d-lg-block">Filter by Price</h4>
+                                        <a class="widget-title d-lg-none" data-toggle="collapse" href="#scatagory-widget02" role="button" aria-expanded="false" aria-controls="scatagory-widget02">Filte by Price<i class="fas fa-angle-down"></i></a>
+
+                                        <div class="widget-wrapper" id="scatagory-widget02">
+                                            <div class="range-slider">
+                                                <span class="irs js-irs-0"><span class="irs"><span class="irs-line" tabindex="-1"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span class="irs-min" style="visibility: hidden;">$0</span><span class="irs-max" style="visibility: hidden;">$1.500</span><span class="irs-from" style="visibility: visible; left: 0%;">$0</span><span class="irs-to" style="visibility: visible; left: 80%;">$1.500</span><span class="irs-single" style="visibility: hidden; left: 33.4884%;">$0 - $1.500</span></span><span class="irs-grid"></span><span class="irs-bar" style="left: 1.86047%; width: 96.2791%;"></span><span class="irs-shadow shadow-from" style="display: none;"></span><span class="irs-shadow shadow-to" style="display: none;"></span><span class="irs-slider from" style="left: 0%;"></span><span class="irs-slider to" style="left: 96.2791%;"></span></span><input type="text" class="js-range-slider irs-hidden-input" value="" readonly="">
+                                                <input type="submit" class="submit" value="filter">
+                                            </div>
+                                        </div>
+                                    </div>*@
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-9 order-lg-first">
+                            <div class="row product-list">
+                                @foreach (var sp in Model)
+                                {
+                                    <div class="col-sm-6 col-xl-4" style="display: block">
+                                        <div class="product-item">
+                                            <div class="product-thumb">
+                                                <a onclick="openModal()">
+
+                                                    <img src="~/Publics/images/SanPham/@sp.Anh" alt="product" style="height: 200px;">
+
+                                                </a>
+                                                @if (sp.KhuyenMai != null)
+                                                {
+                                                    double km = sp.KhuyenMai.Value * 100;
+                                                    <span class="batch sale">@km %  </span>
+                                                }
+                                                <a class="wish-link" href="#">
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                                                </a>
+                                            </div>
+                                            <div class="product-content">
+                                                <a href="#" class="cata">
+                                                    @sp.LoaiSanPham.TenLoai
+                                                </a>
+                                                <h6><a href="@Url.Action("Index","ProductDetail",new { id = sp.MaSP})" class="product-title">@sp.TenSP</a></h6>
+                                                <p class="quantity">@sp.KG KG</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+
+                                                    <div class="price">
+                                                        @if (sp.KhuyenMai == null)
+                                                        {
+                                                            @sp.Gia
+
+                                                        }
+                                                        @if (sp.KhuyenMai != null)
+                                                        {
+                                                            //float gia = ((float?)sp.KhuyenMai) * ((float?)sp.KhuyenMai);
+                                                            @sp.GiaKM <del>@sp.Gia</del>
+                                                        }
+
+
+
+
+
+                                                    </div>
+                                                    @if (Session["user"] != null)
+                                                    {
+
+                                                        <div class="cart-btn-toggle" onclick="cartopen()">
+
+                                                            @*<span class="cart-btn"> <i class="fas fa-shopping-cart"></i> Cart</span>*@
+                                                            <a class="cart-btn" href="@Url.Action("AddCart","GioHang",new {id=sp.MaSP,user_id=Session["UserID"]})"><i class="fas fa-shopping-cart"></i> Cart</a>
+                                                            <div class="price-btn">
+                                                                <div class="price-increase-decrese-group d-flex">
+                                                                    <span class="decrease-btn">
+                                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                                            -
+                                                                        </button>
+                                                                    </span>
+                                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                                    <span class="increase">
+                                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                                            +
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    @if (Session["user"] == null)
+                                                    {
+
+                                                        <div class="cart-btn-toggle">
+
+                                                            <span class="cart-btn"><i class="fas fa-shopping-cart"></i><a href="@Url.Action("Login","Home")"> Cart</a></span>
+
+                                                            <div class="price-btn">
+                                                                <div class="price-increase-decrese-group d-flex">
+                                                                    <span class="decrease-btn">
+                                                                        <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                                            -
+                                                                        </button>
+                                                                    </span>
+                                                                    <input type="text" name="quantity" class="form-controls input-number" value="1">
+                                                                    <span class="increase">
+                                                                        <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                                            +
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- product-details-popup end -->
+                                }
+
+
+
+                                <div class="col-12 text-center mt-4">
+                                    @*<button class="loadMore">Load More</button>*@
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination float-lg-right">
+
+                                            @Html.PagedListPager(Model, page => Url.Action("Index", "Categories", new { page }))
+
+
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- page-content -->
+
+        </div>
+    </div>
+
+
+
+
+

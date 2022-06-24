@@ -1,0 +1,15 @@
+﻿body {
+}
+.bg-a1 {
+    background-image: url('../images/SanPham/Banner1.jpg');
+}
+.bg-theme2 {
+    background-image: url('../images/SanPham/Banner2.jpg');
+  
+}
+
+.bg-theme3 {
+    background-image: url('../images/SanPham/Banner3.jpg');
+   
+}
+

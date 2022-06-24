@@ -1,0 +1,19 @@
+﻿@model IEnumerable<HeathyFood.Models.Entities.LoaiSanPham>
+
+@foreach (var l in Model)
+{
+    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="width: 165px; margin-right: 150px;" data-swiper-slide-index="0">
+
+                <a href="@Url.Action("LoadProductCategory","Categories", new { id= @l.MaLoai })  " class="catagory-item">
+                    <div class="catagory-icon">
+                   
+                        <img src="~/Publics/images/LoaiSanPham/@l.Anh" />
+                    </div>
+                    <p class="catagory-name">@l.TenLoai</p>
+                    
+                </a>
+            
+</div>
+
+}
+

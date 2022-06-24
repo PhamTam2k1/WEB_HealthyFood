@@ -1,0 +1,169 @@
+﻿@model IEnumerable<HeathyFood.Models.Model.GioHang>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_HeathyFood_Layout.cshtml";
+}
+@{ double? tongtien = 0;
+    int? soluong = 0;
+    double? tietkiem = 0;}
+<section class="dashboard-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+
+
+                <div class="form-item billing-item bg-color-white box-shadow p-3 p-lg-5 border-radius5">
+                    <h6>User Accounts</h6>
+                    <form action="#" class="billing-form">
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="input-item">
+                                    <label>Last Name</label>
+                                    <input type="text" name="name" value="@Session["LastName"]">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-item">
+                                    <label>First Name</label>
+                                    <input type="text" name="name" value="@Session["FirstName"]">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="input-item">
+                                    <label>Address*</label>
+                                    <input type="text" name="address" value="@Session["DiaChi"]">
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="input-item">
+                                    <label>Email*</label>
+                                    <input type="text" name="email" value="@Session["Email"]">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-item">
+                                    <label>Mobile*</label>
+                                    <input type="text" name="mobile" value="@Session["SDT"] ">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <div class="form-item payment-item bg-color-white box-shadow p-3 p-lg-5 border-radius5">
+                    <h6>Payment</h6>
+
+                    <form action="#" class="payment-form">
+
+                        <div class="input-item radio">
+                            <input type="radio" name="payment" value="check payment">
+                            <label>Check Payment</label>
+                        </div>
+
+                        <div class="input-item radio">
+                            <input type="radio" name="payment" value="cash on delivary">
+                            <label>Cash on delivary</label>
+                        </div>
+
+                        <div class="input-item radio">
+                            <input type="radio" name="payment" value="paypal">
+                            <label>Paypal</label>
+                        </div>
+                    </form>
+                    <div class="payment-image">
+                        <img src="~/Publics/images/payment/01.png" alt="payment">
+                    </div>
+                    <div class="text-right">
+                        <a href="@Url.Action("ThanhToanDonHang","ThanhToan",new { id=Session["UserID"]})" class="place-order-btn">Đặt hàng</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="cart-item sitebar-cart bg-color-white box-shadow p-3 p-lg-5 border-radius5">
+                    <div class="cart-product-container">
+                        @foreach (var gh in Model)
+                        {
+                            tongtien += gh.ThanhTien;
+                            tietkiem += (gh.SL * gh.Gia - gh.SL * gh.GiaKM);
+                            <div class="cart-product-item">
+                                <div class="row align-items-center">
+                                    <div class="col-6 p-0">
+                                        <div class="thumb">
+                                            <a onclick="openModal()"><img src="~/Publics/images/SanPham/@gh.AnhSP" alt="products"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="product-content">
+                                            <a onclick="openModal()" class="product-title">@gh.TenSP</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <div class="price-increase-decrese-group d-flex">
+                                            <span class="decrease-btn">
+                                                <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                                    -
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quantity" class="form-controls input-number" value="@gh.SL">
+                                            <span class="increase">
+                                                <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                                    +
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+
+                                        @if (gh.GiaKM == null)
+                                        {<div class="product-price">
+                                                <span class="ml-4">@gh.Gia</span>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="product-price">
+                                                <del>@gh.Gia</del><span class="ml-4">@gh.GiaKM</span>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                    <div class="cart-footer">
+                        <div class="product-other-charge">
+                            <p class="d-flex justify-content-between">
+                                <span>Delevery charge</span>
+                                <span>$8.00</span>
+                            </p>
+                            <a href="#">Do you have a voucher?</a>
+                        </div>
+
+                        <div class="cart-total">
+                            <p class="saving d-flex justify-content-between">
+                                <span>Total Savings</span>
+                                <span>@string.Format("{0:0,0}", tietkiem)</span>
+                            </p>
+                            <p class="total-price d-flex justify-content-between">
+                                <span>Total</span>
+                                <span>@string.Format("{0:0,0}", tongtien) VND</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

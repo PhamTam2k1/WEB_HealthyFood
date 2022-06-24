@@ -1,0 +1,77 @@
+﻿@model HeathyFood.Models.Entities.User
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_HeathyFood_Layout.cshtml";
+}
+
+<
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <section class="login-section section-ptb">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="eflux-login-form-area">
+                        <form action="#" class="eflux-login-form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="input-item">
+                                        <label>First Name</label>
+                                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="input-item">
+                                        <label>Last Name</label>
+                                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="input-item">
+                                        <label>Email</label>
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="input-item">
+                                        <label>Password</label>
+                                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="submit" value="Create" class="submit my-2 float-lg-right" >Create Account</button>
+                                @*<input type="submit" value="Create" class="btn btn-default" />*@
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+           
+        </div>
+    </div>
+</div>
+}
+

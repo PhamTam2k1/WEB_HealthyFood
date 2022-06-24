@@ -1,0 +1,100 @@
+﻿@model HeathyFood.Models.Entities.AnhSanPham
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout_Admin.cshtml";
+}
+
+
+<div class="content-wrapper">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.MaAnh)
+    <!-- Content Header (Page header) -->
+    <!-- Main content -->
+    <section class="content my-2">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong class="text-danger text-uppercase">Sửa thông tin Ảnh</strong>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a href="@Url.Action("Index", "AnhSanPham")" class="btn btn-sm btn-info">
+
+
+                            <img src="~/Publics/images/icon/back.png" />    Back
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <form action="~/Admin/AnhSanPham/Edit" method="post" enctype="multipart/form-data">
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="form-group">
+                                    <label>Mã Ảnh<span class="text-danger">(*)</span></label>
+                                    @Html.EditorFor(model => model.MaAnh, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                    @Html.ValidationMessageFor(model => model.MaAnh, "", new { @class = "text-danger" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên Ảnh<span class="text-danger">(*)</span></label>
+                                    @Html.EditorFor(model => model.TenAnh, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.TenAnh, "", new { @class = "text-danger" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Loại sản phẩm<span class="text-danger">(*)</span></label>
+
+                                    @Html.DropDownList("MaSP", null, htmlAttributes: new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.MaSP, "", new { @class = "text-danger" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Chọn Ảnh  </label>
+
+
+                                    <label for="uploadhinh" class="btn btn-primary btn-block btn-outlined">@Model.TenAnh</label>
+
+                                    <input type="file" id="uploadhinh" name="uploadhinh" accept="image/*" style="display: none" />
+
+                                </div>
+                                <div class="form-group">
+                                    <label>isMain</label>
+                                    @Html.EditorFor(model => model.isMain, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.isMain, "", new { @class = "text-danger" })
+                                   
+
+                                </div>
+
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="btn btn-sm btn-success" type="submit" name="Save" value="Save"> <img src="~/Publics/images/icon/save.png" />  Lưu</button>
+                </div>
+            </form>
+            <!-- /.card-body -->
+            <!-- /.card-footer-->
+        </div>
+        <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+</div>
+
+@section scripts{
+    <script src="~/Publics/js/jqueryAnhSanPham.js"></script>
+}

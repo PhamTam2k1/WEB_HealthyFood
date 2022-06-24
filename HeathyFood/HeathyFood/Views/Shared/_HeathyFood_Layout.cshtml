@@ -1,0 +1,974 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eflux - Grocery & Organic Supermarket Responsive Template</title>
+    <link href="~/Publics/css/animate.css" rel="stylesheet" />
+    <link href="~/Publics/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Publics/css/all.min.css" rel="stylesheet" />
+    <link href="~/Publics/css/swiper.min.css" rel="stylesheet" />
+    <link href="~/Publics/css/slick.css" rel="stylesheet" />
+    <link href="~/Publics/css/slick-theme.css" rel="stylesheet" />
+    <link href="~/Publics/css/custom-select.css" rel="stylesheet" />
+    <link href="~/Publics/css/style.css" rel="stylesheet" />
+    <link href="~/Publics/css/imageslider.css" rel="stylesheet" />
+    <link href="~/Publics/css/banner.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>@Page.Title</title>
+
+</head>
+<body id="top-page">
+    @*@if (Session["user"] != null)
+    {
+        <a class="position-absolute" href="javascript:void(0)" onclick="cartopen()">
+            <div id="sitebar-drawar" class="sitebar-drawar">
+                <div class="cart-count d-flex align-items-center">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span>3 Item</span>
+                </div>
+                <div class="total-price">$15.00</div>
+            </div>
+        </a>
+    }*@
+    <!-- admin Modal -->
+    <div class="modal fade" id="useradmin1" tabindex="-1" aria-labelledby="useradmin1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="header-top-action-dropdown">
+                        <ul>
+                            <li class="signin-option"><a onclick="OpenSignUpForm()" href="#" data-dismiss="modal"><i class="fas fa-user mr-2"></i>Sign In</a></li>
+                            <li class="site-phone"><a href="tel:000-000-000"><i class="fas fa-phone"></i> 0969 303 197</a></li>
+                            <li class="site-help"><a href="#"><i class="fas fa-question-circle"></i> Help &amp; More</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--siteinfo Modal -->
+    <div class="modal fade" id="siteinfo1" tabindex="-1" aria-labelledby="siteinfo1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="header-top-action-dropdown">
+                        <ul>
+                            <li class="site-phone"><a href="tel:000-000-000"><i class="fas fa-phone"></i> 0969 303 197</a></li>
+                            <li class="site-help"><a href="#"><i class="fas fa-question-circle"></i> Help &amp; More</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--search Modal -->
+    <div class="modal fade" id="search-select-id" tabindex="-1" aria-labelledby="search-select-id" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="select-search-option">
+                        <div class="flux-custom-select">
+                            <select>
+                                <option value="0">Select Catagory</option>
+                                <option value="1">Vegetables</option>
+                                <option value="2">Fruits</option>
+                                <option value="3">Salads</option>
+                                <option value="4">Fish &amp; Seafood</option>
+                                <option value="5">Fresh Meat</option>
+                                <option value="6">Health Product</option>
+                                <option value="7">Butter &amp; Eggs</option>
+                                <option value="8">Oils &amp; Venegar</option>
+                                <option value="9">Frozen Food</option>
+                                <option value="10">Jam &amp; Honey</option>
+                            </select>
+                            <div class="select-selected">Select Catagory</div><div class="select-items select-hide"><div>Vegetables</div><div>Fruits</div><div>Salads</div><div>Fish &amp; Seafood</div><div>Fresh Meat</div><div>Health Product</div><div>Butter &amp; Eggs</div><div>Oils &amp; Venegar</div><div>Frozen Food</div><div>Jam &amp; Honey</div></div>
+                        </div>
+                        <form action="#" class="search-form">
+                            <input type="text" name="search" placeholder="Search for Products">
+                            <button class="submit-btn"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- menu modal -->
+    <div class="modal fade" id="menu-id" tabindex="-1" aria-labelledby="menu-id" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="menu d-xl-flex flex-wrap pl-0 list-unstyled">
+                        <li class="item-has-children active">
+                            <a data-toggle="collapse" href="#mainmenuid1" role="button" aria-expanded="false" aria-controls="catagory-widget1"><span>Home</span> <i class="fas fa-angle-down"></i></a>
+                            <ul class="submenu collapse" id="mainmenuid1">
+                                <li><a href="home-default.html">Home Default</a></li>
+                                <li><a href="index-icon.html">Home Default2</a></li>
+                                <li><a href="index.html">Home Sticky Sidebar</a></li>
+                                <li><a href="home-search.html">Home Search</a></li>
+                                <li><a href="home-slider.html">Home Slider</a></li>
+                                <li class="active"><a href="home-slider2.html">Home Slider2</a></li>
+                                <li><a href="home7.html">Home Seven</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">New Products</a></li>
+                        <li>
+                            <a data-toggle="collapse" href="#megamenu-main" role="button" aria-expanded="false" aria-controls="catagory-widget1"><span>Featured Products</span> <i class="fas fa-angle-down"></i></a>
+                            <ul class=" collapse" id="megamenu-main">
+                                <li>
+                                    <a data-toggle="collapse" href="#megamenu-main01" role="button" aria-expanded="false" aria-controls="megamenu-main01"><span>Vegetables</span> <i class="fas fa-angle-down"></i></a>
+                                    <ul class="submenu collapse" id="megamenu-main01">
+                                        <li><a href="product-list.html">Artichoke.</a></li>
+                                        <li><a href="product-list.html">Aubergune</a></li>
+                                        <li><a href="product-list.html">Asparagus</a></li>
+                                        <li><a href="product-list.html">Broccoflower</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" href="#megamenu-main02" role="button" aria-expanded="false" aria-controls="megamenu-main02"><span>Fruits</span> <i class="fas fa-angle-down"></i></a>
+                                    <ul class="submenu collapse" id="megamenu-main02">
+                                        <li><a href="product-list.html">Artichoke.</a></li>
+                                        <li><a href="product-list.html">Aubergune</a></li>
+                                        <li><a href="product-list.html">Asparagus</a></li>
+                                        <li><a href="product-list.html">Broccoflower</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" href="#megamenu-main03" role="button" aria-expanded="false" aria-controls="megamenu-main03"><span>Salads</span> <i class="fas fa-angle-down"></i></a>
+                                    <ul class="submenu collapse" id="megamenu-main03">
+                                        <li><a href="product-list.html">Artichoke.</a></li>
+                                        <li><a href="product-list.html">Aubergune</a></li>
+                                        <li><a href="product-list.html">Asparagus</a></li>
+                                        <li><a href="product-list.html">Broccoflower</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a data-toggle="collapse" href="#megamenu-main04" role="button" aria-expanded="false" aria-controls="megamenu-main04"><span>Health Care</span> <i class="fas fa-angle-down"></i></a>
+                                    <ul class="submenu collapse" id="megamenu-main04">
+                                        <li><a href="product-list.html">Artichoke.</a></li>
+                                        <li><a href="product-list.html">Aubergune</a></li>
+                                        <li><a href="product-list.html">Asparagus</a></li>
+                                        <li><a href="product-list.html">Broccoflower</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item-has-children">
+                            <a data-toggle="collapse" href="#mainmenuid2" role="button" aria-expanded="false" aria-controls="mainmenuid2"><span>Pages</span> <i class="fas fa-angle-down"></i></a>
+                            <ul class="submenu collapse" id="mainmenuid2">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li class="item-has-children">
+                                    <a data-toggle="collapse" href="#mobile-product1" role="button" aria-expanded="false" aria-controls="mobile-product1"><span>Products</span> <i class="fas fa-angle-down"></i></a>
+                                    <ul class="submenu collapse" id="mobile-product1">
+                                        <li><a href="product-list.html">Product List</a></li>
+                                        <li><a href="product-leftsidebar.html">Product leftsidebar</a></li>
+                                        <li><a href="product-fullwidth.html">Product Fullwidth</a></li>
+                                        <li><a href="brand-product.html">Brand Page</a></li>
+                                        <li><a href="product-detail.html">Product Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item-has-children">
+                                    <a data-toggle="collapse" href="#mobile-dashboard1" role="button" aria-expanded="false" aria-controls="mobile-dashboard1"><span>Dashboard1</span> <i class="fas fa-angle-down"></i></a>
+                                    <ul class="submenu collapse" id="mobile-dashboard1">
+                                        <li><a href="user-dashbord.html">User Dashboard</a></li>
+                                        <li><a href="profile.html">Profile</a></li>
+                                        <li><a href="track-order.html">Track Order</a></li>
+                                        <li><a href="wishlist.html">Wish List</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item-has-children">
+                                    <a data-toggle="collapse" href="#mobile-dashboard2" role="button" aria-expanded="false" aria-controls="mobile-dashboard2"><span>Dashboard2</span> <i class="fas fa-angle-down"></i></a>
+                                    <ul class="submenu collapse" id="mobile-dashboard2">
+                                        <li><a href="dashboard.html">My Orders</a></li>
+                                        <li><a href="dashboard-account.html">Accounts</a></li>
+                                        <li><a href="dashboard-address-book.html">Address Book</a></li>
+                                        <li><a href="dashboard-order-cancel.html">Order Cancel</a></li>
+                                        <li><a href="dashboard-order-process.html">Order Process</a></li>
+                                        <li><a href="dashboard-password-change.html">Password Change</a></li>
+                                        <li><a href="dashboard-wishlist.html">whistlist</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="singin.html">SignIn</a></li>
+                                <li><a href="signup.html">SignUp</a></li>
+                                <li><a href="product-order-success.html">Order Success</a></li>
+                                <li><a href="comming-soon.html">Comming Soon</a></li>
+                                <li><a href="404-page.html">404 page</a></li>
+                            </ul>
+                        </li>
+                        <li class="item-has-children">
+                            <a data-toggle="collapse" href="#mainmenuid3" role="button" aria-expanded="false" aria-controls="mainmenuid3"><span>Blog</span> <i class="fas fa-angle-down"></i></a>
+                            <ul class="submenu collapse" id="mainmenuid3">
+                                <li><a href="blog.html">Blog full width</a></li>
+                                <li><a href="blog-rightsidebar.html">Blog Rightsidebar</a></li>
+                                <li><a href="single.html">Blog Single</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- sidebar-cart -->
+    @*<div id="sitebar-cart" class="sitebar-cart">
+        <div class="sc-head d-flex justify-content-between align-items-center">
+            <div class="cart-count">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 472.337 472.336" style="enable-background:new 0 0 472.337 472.336;" xml:space="preserve"><path d="M406.113,126.627c0-5.554-4.499-10.05-10.053-10.05h-76.377V91.715C319.684,41.143,278.543,0,227.969,0
+                   c-50.573,0-91.713,41.143-91.713,91.715v24.862H70.45c-5.549,0-10.05,4.497-10.05,10.05L3.914,462.284
+                   c0,5.554,4.497,10.053,10.055,10.053h444.397c5.554,0,10.057-4.499,10.057-10.053L406.113,126.627z M156.352,91.715
+                   c0-39.49,32.13-71.614,71.612-71.614c39.49,0,71.618,32.13,71.618,71.614v24.862h-143.23V91.715z M146.402,214.625
+                   c-9.92,0-17.959-8.044-17.959-17.961c0-7.269,4.34-13.5,10.552-16.325v17.994h14.337v-18.237
+                   c6.476,2.709,11.031,9.104,11.031,16.568C164.363,206.586,156.319,214.625,146.402,214.625z M310.484,214.625
+                   c-9.922,0-17.959-8.044-17.959-17.961c0-7.269,4.341-13.495,10.548-16.325v17.994h14.338v-18.241
+                   c6.478,2.714,11.037,9.108,11.037,16.568C328.448,206.586,320.407,214.625,310.484,214.625z"></path></svg>
+                <span>3 Item</span>
+            </div>
+            <span onclick="cartclose()" class="close-icon"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="cart-product-container">
+            <div class="cart-product-item">
+                <div class="close-item"><i class="fas fa-times"></i></div>
+                <div class="row align-items-center">
+                    <div class="col-6 p-0">
+                        <div class="thumb">
+                            <a href="#"><img src="~/Publics/images/products/cart/01.png" alt="products"></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-content">
+                            <a href="#" class="product-title">Daisy Cont Oil</a>
+                            <div class="product-cart-info">
+                                1x 31b
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="price-increase-decrese-group d-flex">
+                            <span class="decrease-btn">
+                                <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                    -
+                                </button>
+                            </span>
+                            <input type="text" name="quantity" class="form-controls input-number" value="1">
+                            <span class="increase">
+                                <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                    +
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-price">
+                            <del>$8.00</del><span class="ml-4">$5.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="cart-product-item">
+                <div class="close-item"><i class="fas fa-times"></i></div>
+                <div class="row align-items-center">
+                    <div class="col-6 p-0">
+                        <div class="thumb">
+                            <a href="#"><img src="~/Publics/images/products/cart/02.png" alt="products"></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-content">
+                            <a href="#" class="product-title">Daisy Cont Oil</a>
+                            <div class="product-cart-info">
+                                1x 31b
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="price-increase-decrese-group d-flex">
+                            <span class="decrease-btn">
+                                <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                    -
+                                </button>
+                            </span>
+                            <input type="text" name="quantity" class="form-controls input-number" value="1">
+                            <span class="increase">
+                                <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                    +
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-price">
+                            <del>$8.00</del><span class="ml-4">$5.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-product-item">
+                <div class="close-item"><i class="fas fa-times"></i></div>
+                <div class="row align-items-center">
+                    <div class="col-6 p-0">
+                        <div class="thumb">
+                            <a href="#"><img src="~/Publics/images/products/cart/03.png" alt="products"></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-content">
+                            <a href="#" class="product-title">Daisy Cont Oil</a>
+                            <div class="product-cart-info">
+                                1x 31b
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-6">
+                        <div class="price-increase-decrese-group d-flex">
+                            <span class="decrease-btn">
+                                <button type="button" class="btn quantity-left-minus" data-type="minus" data-field="">
+                                    -
+                                </button>
+                            </span>
+                            <input type="text" name="quantity" class="form-controls input-number" value="1">
+                            <span class="increase">
+                                <button type="button" class="btn quantity-right-plus" data-type="plus" data-field="">
+                                    +
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="product-price">
+                            <del>$8.00</del><span class="ml-4">$5.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="product-other-charge">
+                <p class="d-flex justify-content-between">
+                    <span>Delevery charge</span>
+                    <span>$8.00</span>
+                </p>
+                <a href="#">Do you have a voucher?</a>
+            </div>
+
+            <div class="cart-total">
+                <p class="saving d-flex justify-content-between">
+                    <span>Total Savings</span>
+                    <span>$11.00</span>
+                </p>
+                <p class="total-price d-flex justify-content-between">
+                    <span>Total</span>
+                    <span>$35.00</span>
+                </p>
+                <a href="checkout.html" class="procced-checkout">Procced Checkout</a>
+            </div>
+        </div>
+    </div>*@
+    <!-- header section start -->
+    <header class="header">
+        @Html.Partial("HeaderLayout")
+    </header>
+    <!-- header section end -->
+
+
+    <div class="main-content-area product">
+        @RenderBody()
+
+    </div>
+    <!-- footer section -->
+    <footer class="footer">
+        @Html.Partial("FooterLayout")
+    </footer>
+    <!-- footer section -->
+    <!-- login-area -->
+    <section id="login-area" class="login-area">
+        <div onclick="CloseSignUpForm()" class="overlay"></div>
+        <div class="login-body-wrapper">
+            <div class="login-body">
+                <div class="close-icon" onclick="CloseSignUpForm()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="login-header">
+                    <h4>Create Your Account</h4>
+                    <p>Login with your email &amp; password</p>
+                </div>
+                <div class="login-content">
+                    <form action="#" class="login-form">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <button type="submit" class="submit">Sign Up</button>
+                    </form>
+                    <div class="text-center seperator">
+                        <span>Or</span>
+                    </div>
+                    <div class="othersignup-option">
+                        <a class="facebook" href="#"><i class="fab fa-facebook-square"></i>Continue with Facebook</a>
+                        <a class="google" href="#"><i class="fab fa-google-plus"></i>Continue with Google</a>
+                    </div>
+                    <div class="text-center dont-account py-4">
+                        <p class="mb-0">Don't have any account <a href="#">Sing Up</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="forgot-password text-center">
+                <p>forgot Passowrd? <a href="#">Reset It</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- login-area -->
+    <!-- mobile-footer -->
+    <div class="mobile-footer d-flex justify-content-between align-items-center d-xl-none">
+        <button class="info" type="button" data-toggle="modal" data-target="#siteinfo1"><i class="fas fa-info-circle"></i></button>
+
+        <div class="footer-cart">
+            <a onclick="cartopen()" href="#" class="d-flex align-items-center"><span class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">3</span></span> <span class="cart-amount ml-2">$560.00</span></a>
+        </div>
+
+        <div class="footer-admin-area">
+            <!-- <span class="user-admin">
+                <i class="fas fa-user"></i>
+            </span> -->
+            <button class="user-admin" type="button" data-toggle="modal" data-target="#useradmin1"><i class="fas fa-user"></i></button>
+        </div>
+    </div>
+    <!-- mobile-footer -->
+
+
+
+
+
+    <div onclick="demosClose()" id="sidebar-demos-overlay" class="sidebar-demos-overlay"></div>
+    <div id="sla" class="sidebar-layouts-area">
+        <div class="sla-header">
+            <div class="sidebar-layout-area-close" onclick="demosClose()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="layout-area">
+            <h6 class="layout-header">Layout Option</h6>
+            <div class="d-flex justify-content-between">
+                <a href="https://efluxhtml.fluxtheme.com/eflux-dark/index.html" class="dark-layout">Dark Version</a>
+                <a href="index.html" class="light-layout">Light Version</a>
+                <a href="https://efluxhtml.fluxtheme.com/eflux-rtl/home-rtl.html" class="rtl-layout">Rfl Version</a>
+            </div>
+        </div>
+
+        <div class="demos-layout bg-gray1 d-none d-lg-block">
+            <h6>Home Page Demos</h6>
+            <div class="row">
+                <div class="col-6">
+                    <a href="index.html" target="_blank" class="demo-item">
+                        <div class="demo-item-inner">
+                            <div class="demo-thumb">
+                                <img src="~/Publics/images/demo/demo-version-1.png" alt="thumb">
+                                <span class="view">View</span>
+                            </div>
+                            <div class="demo-content text-center">
+                                <h4>Demo Version (01)</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="index-icon.html" target="_blank" class="demo-item">
+                        <div class="demo-item-inner">
+                            <div class="demo-thumb">
+                                <img src="~/Publics/images/demo/demo-version-2.png" alt="thumb">
+                                <span class="view">View</span>
+                            </div>
+                            <div class="demo-content text-center">
+                                <h4>Demo Version (02)</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="home-search.html" target="_blank" class="demo-item">
+                        <div class="demo-item-inner">
+                            <div class="demo-thumb">
+                                <img src="~/Publics/images/demo/demo-version-3.png" alt="thumb">
+                                <span class="view">View</span>
+                            </div>
+                            <div class="demo-content text-center">
+                                <h4>Demo Version (03)</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="home-default.html" target="_blank" class="demo-item">
+                        <div class="demo-item-inner">
+                            <div class="demo-thumb">
+                                <img src="~/Publics/images/demo/demo-version-4.png" alt="thumb">
+                                <span class="view">View</span>
+                            </div>
+                            <div class="demo-content text-center">
+                                <h4>Demo Version (04)</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="home-slider.html" target="_blank" class="demo-item">
+                        <div class="demo-item-inner">
+                            <div class="demo-thumb">
+                                <img src="~/Publics/images/demo/demo-version-5.png" alt="thumb">
+                                <span class="view">View</span>
+                            </div>
+                            <div class="demo-content text-center">
+                                <h4>Demo Version (05)</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="home-slider2.html" target="_blank" class="demo-item">
+                        <div class="demo-item-inner">
+                            <div class="demo-thumb">
+                                <img src="~/Publics/images/demo/demo-version-6.png" alt="thumb">
+                                <span class="view">View</span>
+                            </div>
+                            <div class="demo-content text-center">
+                                <h4>Demo Version (06)</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="home7.html" class="demo-item">
+                        <div class="demo-item-inner">
+                            <div class="demo-thumb">
+                                <img src="~/Publics/images/demo/demo-version-7.png" alt="thumb">
+                                <span class="view">View</span>
+                            </div>
+                            <div class="demo-content text-center">
+                                <h4>Demo Version (07)</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="demos-layout">
+            <h6>Inner Page Demos</h6>
+            <div class="row">
+
+                <div class="col-6">
+                    <a href="brand-product.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/brand-product.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Brand Product</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="product-detail.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/product-detail.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>product-detail</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="product-fullwidth.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/product-list-fullwidth.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Product List</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="product-leftsidebar.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/product-list-left-sidebar.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Product Leftsidebar</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="product-list.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/product-list.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Product Rigthsidebar</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="dashboard.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/my-order.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>My Order</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="dashboard-account.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/account.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Account Page</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="dashboard-address-book.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/address-book.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Address Book</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="dashboard-order-cancel.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/order-cancel.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Order Cancel</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="dashboard-order-process.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/ordre-progress.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Order Progress</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="dashboard-password-change.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/password-change.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Password Change</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="dashboard-wishlist.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/wishlist.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Wishlist Page</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="checkout.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/checkout.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Checkout</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="user-dashbord.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/dashboard.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>User Dashboard</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="profile.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/profile.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>User Profile</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="track-order.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/track-order.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Track Order</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="track-order-single.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/track-order-single.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Track Order Single</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="wishlist.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/wishlist-2.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Wishlist Page 2</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="singin.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/signin.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Sign In</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="signup.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/signup.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Sign Up</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="about.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/about.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>About Us</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="contact.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/contact.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Contact Us</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="faq.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/faq.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Faq Page</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="newsletter.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/newsletter.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Newsletter</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="product-order-success.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/order-success.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Order Success</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="blog.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/blog-list.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Blog List</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="blog-rightsidebar.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/blog-right-sidebar.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Blog Right sidebar</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="single.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/page-layout/blog-single.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Blog Single</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="404-page.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/product-feature/error.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>404 page</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <a href="comming-soon.html" target="_blank" class="page-layout-item">
+                        <div class="page-layout-thumb">
+                            <img src="~/Publics/images/product-feature/comming-soon.png" alt="thumb">
+                            <span class="view">View</span>
+                        </div>
+                        <div class="page-layout-content text-center">
+                            <h4>Comming Soon Page</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#top-page" class="to-top js-scroll-trigger"><span><i class="fas fa-arrow-up"></i></span></a>
+    <link href="~/Publics/css/style.css" rel="stylesheet" />
+    <script src="~/Publics/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Publics/js/custom-select.js"></script>
+    <script src="~/Publics/js/fly-cart.js"></script>
+    <script src="~/Publics/js/functions.js"></script>
+    <script src="~/Publics/js/jquery-easeing.min.js"></script>
+    <script src="~/Publics/js/jquery.elevatezoom.js"></script>
+    <script src="~/Publics/js/jquery.min.js"></script>
+    <script src="~/Publics/js/multi-countdown.js"></script>
+    <script src="~/Publics/js/price-range.js"></script>
+    <script src="~/Publics/js/scroll-nav.js"></script>
+    <script src="~/Publics/js/swiper.min.js"></script>
+    <script src="~/Publics/js/slick.js"></script>
+    <script src="~/Publics/js/theia-sticky-sidebar.js"></script>
+    <script src="~/Publics/js/imgsilder.js"></script>
+    <!-- Mirrored from efluxhtml.fluxtheme.com/eflux-ltr/home-slider2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Apr 2022 13:18:36 GMT -->
+    <div class="zoomContainer" style="-webkit-transform: translateZ(0);position:absolute;left:0px;top:0px;height:0px;width:0px;"><div class="zoomWindowContainer" style="width: 400px;"><div style="z-index: 999; overflow: hidden; margin-left: 0px; margin-top: 0px; background-position: 0px 0px; width: 0px; height: 0px; float: left; display: none; cursor: crosshair; background-repeat: no-repeat; position: absolute; background-image: url(&quot;~/Publics/images/product-detail/01.jpg&quot;);" class="zoomWindow">&nbsp;</div></div></div>
+</body>
+
+
+
+
+</html>

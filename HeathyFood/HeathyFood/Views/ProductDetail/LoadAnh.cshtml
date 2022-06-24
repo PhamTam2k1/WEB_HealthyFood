@@ -1,0 +1,11 @@
+﻿@model IEnumerable<HeathyFood.Models.Entities.AnhSanPham>
+@foreach (var anh in Model)
+{
+    <div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 499px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
+        <div>
+            <div style="width: 100%; display: inline-block;">
+                <img src="~/Publics/images/product-detail/@anh.TenAnh" alt="" class="img-fluid blur-up lazyload image_zoom_cls-0">
+            </div>
+        </div>
+    </div>
+}

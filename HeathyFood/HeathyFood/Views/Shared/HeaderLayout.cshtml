@@ -1,0 +1,175 @@
+﻿@*@model IEnumerable<HeathyFood.Models.Model.GioHang>*@
+<div class="header-top">
+    <div class="mobile-header d-flex justify-content-between align-items-center d-xl-none">
+
+        <div class="all-catagory-option mobile-device">
+            <a class="bar-btn"><i class="fas fa-bars"></i><span class="ml-2 d-none d-md-inline">All Categories</span></a>
+            <a class="close-btn"><i class="fas fa-times"></i><span class="ml-2 d-none d-md-inline">All Categories</span></a>
+        </div>
+        <a href="index.html" class="logo"><img src="~/Publics/images/logo.png" alt="logo"></a>
+
+         search select 
+        <div class="text-center mobile-search">
+            <button type="button" data-toggle="modal" data-target="#search-select-id"><i class="fas fa-search"></i></button>
+        </div>
+       
+        <!-- menubar -->
+        <div>
+            <button class="menu-bar" type="button" data-toggle="modal" data-target="#menu-id">
+                Home<i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+
+    </div>
+    <div class="d-none d-xl-flex row align-items-center">
+        <div class="col-5 col-md-2">
+            <a href="index.html" class="logo"><img src="~/Publics/images/logo.png" alt="logo"></a>
+        </div>
+        <div class="col-5 col-md-9 col-lg-5">
+
+            <div class="select-search-option d-none d-md-flex">
+                @*<div class="flux-custom-select">
+                    <select>
+                        <option value="0">Select Catagory</option>
+                        <option value="1">Vegetables</option>
+                        <option value="2">Fruits</option>
+                        <option value="3">Salads</option>
+                        <option value="4">Fish &amp; Seafood</option>
+                        <option value="5">Fresh Meat</option>
+                        <option value="6">Health Product</option>
+                        <option value="7">Butter &amp; Eggs</option>
+                        <option value="8">Oils &amp; Venegar</option>
+                        <option value="9">Frozen Food</option>
+                        <option value="10">Jam &amp; Honey</option>
+                    </select>
+
+                </div>*@
+                @*<form action="#" class="search-form">
+                    <input type="text" name="search" placeholder="Search for Products">
+                    <button class="submit-btn"><i class="fas fa-search"></i></button>
+                </form>*@
+                @*@using (Html.BeginForm())
+                {
+            <div class="form-group form-check-inline" style="margin-left: 40px;">
+                @Html.TextBox("SearchString", "", new { @class = "form-control" , @placeholder = "Search for Products" })
+                <input type="submit" class="btn-btn-defaut" style="margin-left:20px;" value="search">
+
+            </div>
+                }*@
+            </div>
+        </div>
+        <div class="col-2 col-md-1 col-lg-5">
+            <ul class="site-action d-none d-lg-flex align-items-center justify-content-between  ml-auto">
+                <li class="site-phone"><a href="tel:0969-303-197"><i class="fas fa-phone"></i> 0969 303 197</a></li>
+                <li class="site-help"><a href="#"><i class="fas fa-question-circle"></i> Help &amp; More</a></li>
+                @*<li class="wish-list"><a href="wishlist.html"><i class="fas fa-heart"></i> <span class="count">04</span></a></li>*@
+                @*<li class="my-account d-none">
+                        <a class="dropdown-toggle" href="#" role="button" id="myaccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user mr-1"></i> My Account</a>
+                        <ul class="submenu dropdown-menu" aria-labelledby="myaccount">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="@Url.Action("Register","Home")">Register</a></li>
+                        </ul>
+                    </li>*@
+                @if (Session["user"] != null)
+                {
+                    <li class="signin-option"><a href="@Url.Action("Index","Home")"><i class="fas fa-user mr-2"></i>@Session["FullName"] </a></li>
+                    <li class="signin-option py-2"><a href="@Url.Action("Logout","Home")"><img src="~/Publics/images/icon/check-out.png" /></a></li>
+
+
+                }
+                @if (Session["user"] == null)
+                {
+                    <li class="signin-option"><a href="@Url.Action("Login","Home")"><i class="fas fa-user mr-2"></i>Sign In</a></li>
+                }
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+<hr>
+<div class="header-bottom">
+    <div class="row m-0 align-items-center mega-menu-relative">
+        <div class="col-md-3 d-none d-xl-block">
+            <div class="all-catagory-option">
+                <a href="@Url.Action("Index","Home")" class="bar-btn"><i class="fas fa-bars"></i>Home</a>
+                <a class="close-btn"><i class="fas fa-times"></i>Home</a>
+
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="menu-area d-none d-xl-flex justify-content-between align-items-center">
+                <ul class="menu d-xl-flex flex-wrap list-unstyled">
+                    <li class="item-has-children">
+                        <a href="@Url.Action("Index","Categories")">All categories</i></a>
+
+                    </li>
+                    @if (Session["user"] != null)
+                    {
+                        <li><a href="@Url.Action("Index", "Profile")">My profile</a></li>
+                    }
+                    @if (Session["user"] == null)
+                    {
+                        <li><a href="@Url.Action("Login", "Home")">My profile</a></li>
+ }
+                    @*<li class="item-has-mega-menu">
+            <a href="#">Featured Products <i class="fas fa-angle-down"></i></a>
+            <div class="mega-menu-container">
+                <div class="row m-0">
+                    <div class="col-lg-7">
+                        <div class="row m-0">
+                            <div class="col-lg-4">
+                                <div class="ctagory-item">
+                                    <h6 class="title">Vegetables</h6>
+                                    <ul>
+                                        <li><a href="product-list.html">Artichoke.</a></li>
+                                        <li><a href="product-list.html">Aubergune</a></li>
+                                        <li><a href="product-list.html">Asparagus</a></li>
+                                        <li><a href="product-list.html">Broccoflower</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="menu-img">
+                            <img class="w-100" src="~/Publics/images/mega-menu-img.png" alt="menu-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>*@
+
+                    <li class="item-has-children">
+                        <a href="blog.html">Blog <i class="fas fa-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="blog.html">Blog full width</a></li>
+                            <li><a href="blog-rightsidebar.html">Blog Rightsidebar</a></li>
+                            <li><a href="single.html">Blog Single</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+        @if (Session["user"] != null)
+        {
+            
+            <div class="col-md-2 p-0 d-none d-xl-block">
+               @* @Url.Action("SLHangTrongGio", "GioHang", new {id=Session["UserID"]})*@
+                @Html.Action("SLHangTrongGio", "GioHang", new { id = Session["UserID"] })
+                @*<div class="menu-area d-flex justify-content-end">
+                    <ul class="menu-action d-none d-lg-block">
+                        <li class="cart-option">
+                            <a href="@Url.Action("View_GioHang","GioHang",new {user_id=Session["UserID"]})"><span class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">1</span></span> <span class="cart-amount"></span></a>
+                        </li>
+                    </ul>
+                </div>*@
+            </div>
+
+
+        }
+
+    </div>
+</div>

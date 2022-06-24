@@ -1,0 +1,22 @@
+﻿@model IEnumerable<HeathyFood.Models.Model.GioHang>
+
+@if (Model != null)
+{
+    <div class="menu-area d-flex justify-content-end">
+        <ul class="menu-action d-none d-lg-block">
+            <li class="cart-option">
+                <a href="@Url.Action("View_GioHang","GioHang",new {user_id=Session["UserID"]})"><span class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">@Model.Count()</span></span> <span class="cart-amount"></span></a>
+            </li>
+        </ul>
+    </div>}
+
+else
+{
+    <div class="menu-area d-flex justify-content-end">
+        <ul class="menu-action d-none d-lg-block">
+            <li class="cart-option">
+                <a href="@Url.Action("View_GioHang","GioHang",new {user_id=Session["UserID"]})"><span class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="count">0</span></span> <span class="cart-amount"></span></a>
+            </li>
+        </ul>
+    </div>
+}
